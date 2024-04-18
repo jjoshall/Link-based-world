@@ -1,0 +1,159 @@
+{
+    "Title": "The Heist",
+    "Credits": "Created by Josh Hall (jowihall@ucsc.edu).",
+    "InitialLocation": "Entrance of Bank",
+    "Locations": {
+        "Entrance of Bank": {
+            "Body": "You are looking at the main entrance of the bank.",
+            "Choices": [
+                {
+                    "Text": "Go into the Main Lobby",
+                    "Target": "Main Lobby"
+                },
+                {
+                    "Text": "Sneak through Back Entrance",
+                    "Target": "Back Entrance"
+                },
+                {
+                    "Text": "Crawl through the Vents",
+                    "Target": "Vents"
+                }
+            ]
+        },
+        "Main Lobby": {
+            "Body": "You are now in the main lobby, and there are many guards here.",
+            "Choices": [
+                {
+                    "Text": "Head to the Payphone",
+                    "Target": "Payphone"
+                },
+                {
+                    "Text": "Go back outside to the Entrance of the Bank",
+                    "Target": "Entrance of Bank"
+                }
+            ]
+        },
+        "Back Entrance": {
+            "Body": "You snuck through the back entrance and find two rooms.",
+            "Choices": [
+                {
+                    "Text": "Head through the room labeled 'Cam Room'",
+                    "Target": "CamRoom"
+                },
+                {
+                    "Text": "Go back to the Entrance of the Bank",
+                    "Target": "Entrance of Bank"
+                }
+            ]
+        },
+        "Vents": {
+            "Body": "You are crawling through the vents and have direct access to the door of the saferoom.",
+            "Choices": [
+                {
+                    "Text": "Drop down in front of Door to the Saferoom",
+                    "Target": "DoortoSafe"
+                },
+                {
+                    "Text": "Crawl back out to the Entrance of the Bank",
+                    "Target": "Entrance of Bank"
+                }
+            ]
+        },
+        "Payphone": {
+            "Body": "The phone begins to ring.",
+            "Choices": [
+                {
+                    "Text": "Go back to the Main Lobby",
+                    "Target": "Main Lobby"
+                },
+                {
+                    "Text": "Pick up the phone",
+                    "Target": "CallMessage"
+                }
+            ]
+        },
+        "CallMessage": {
+            "Body": "You answer and the distorted voice on the other end tells you to find the key in the Bathroom behind the sink.",
+            "Choices": [
+                {
+                    "Text": "Go back to the Main Lobby",
+                    "Target": "Main Lobby"
+                },
+                {
+                    "Text": "Continue to the Bathroom",
+                    "Target": "Bathroom"
+                }
+            ]
+        },
+        "Bathroom": {
+            "Body": "You are inside the bathroom and there is someone inside one of the stalls.",
+            "Choices": [
+                {
+                    "Text": "Collect the key to the Door to the Safe",
+                    "Target": "GetKey"
+                },
+                {
+                    "Text": "Go back to Main Lobby",
+                    "Target": "Main Lobby"
+                }
+            ]
+        },
+        "GetKey": {
+            "Body": "You acquired the key to the Door to the Safe.",
+            "Choices": [
+                {
+                    "Text": "Go back to Main Lobby",
+                    "Target": "Main Lobby"
+                }
+            ]
+        },
+        "CamRoom": {
+            "Body": "You find a man sleeping in his chair with a large control panel in front of him. There are also a dozen monitors displaying different rooms of the bank.",
+            "Choices": [
+                {
+                    "Text": "Press the red button labeled 'Power' to disable all the cameras in the building",
+                    "Target": "DisableCams"
+                }
+            ]
+        },
+        "DisableCams": {
+            "Body": "You push the button and all the monitors go dark.",
+            "Choices": [
+                {
+                    "Text": "Head back to the Back Entrance",
+                    "Target": "Back Entrance"
+                }
+            ]
+        },
+        "DoortoSafe": {
+            "Body": "There is a large steel door guarding the saferoom. It is locked without the key.",
+            "Choices": [
+                {
+                    "Text": "Use the key to unlock the door and go to the Safe",
+                    "Target": "Safe",
+                    "RequiresKey": true
+                },
+                {
+                    "Text": "Climb back through the Vents",
+                    "Target": "Vents"
+                }
+            ]
+        },
+        "Safe": {
+            "Body": "You finally find the safe.",
+            "Choices": [
+                {
+                    "Text": "You unlock the safe, retrieve the money, and now must go back the way you came to escape unnoticed",
+                    "Target": "Escape"
+                },
+                {
+                    "Text": "Go back to the vents",
+                    "Target": "Vents"
+                }
+            ]
+        },
+        "Escape": {
+            "Body": "You crawl back through the vents and escape successfully."
+        }
+    }
+}
